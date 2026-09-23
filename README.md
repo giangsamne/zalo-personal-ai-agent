@@ -114,6 +114,23 @@ Từ nay về sau, mỗi khi bật máy tính lên, Bot sẽ tự động chạy
 
 ---
 
+## 💬 Hướng Dẫn Sử Dụng Thực Tế (Cách Dùng)
+
+### 👑 Dành cho Chủ Nhân (Master):
+- **Trò chuyện trực tiếp**: Bạn chỉ cần gửi tin nhắn văn bản bình thường đến tài khoản Zalo của bot. Trợ lý AI sẽ tự động hiểu ngữ cảnh và phản hồi với mô hình cao cấp (**Gemini Pro**).
+- **Phê duyệt khách nhắn tin**:
+  - Khi có bạn bè hoặc người lạ nhắn tin đến lần đầu, bot sẽ lập tức gửi thông báo về Zalo của bạn:
+    > 🔔 *Có người dùng mới muốn trò chuyện: [Tên khách] (UID: ...)*  
+    > 🔑 *Mã Token cấp quyền (30 phút): `xxxxxxxx...`*
+  - Nếu bạn đồng ý cho họ trò chuyện với AI, bạn chỉ việc chuyển tiếp (forward) mã token này cho họ.
+
+### 👤 Dành cho Khách (Guest / Bạn bè):
+- **Nhắn tin lần đầu**: Khách nhận được lời chào tự động thông báo tài khoản đang được quản lý bởi AI và cần mã xác thực.
+- **Kích hoạt phiên AI**: Khách chỉ cần gửi đúng chuỗi mã Token nhận được từ chủ nhân. Hệ thống sẽ kích hoạt một phiên trò chuyện riêng tư trong **30 phút** với mô hình tốc độ cao (**Gemini Flash**).
+- **Chủ động thoát**: Khách có thể gửi tin nhắn `/exit` bất cứ lúc nào để kết thúc phiên sớm.
+
+---
+
 ## ⚙️ Cấu Hình Nâng Cao (Configuration)
 
 Bạn có thể tạo file `.env` từ file mẫu `.env.example` để tùy chỉnh thông tin quản trị viên:
