@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-v20%2B-339933.svg?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js" /></a>
-  <a href="https://github.com/giangsamne/zalo-personal-ai-agent/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-2563eb.svg?style=flat&logo=git&logoColor=white" alt="Version" /></a>
+  <a href="https://github.com/giangsamne/zalo-personal-ai-agent/releases"><img src="https://img.shields.io/badge/Release-v0.1.0--beta-orange.svg?style=flat&logo=git&logoColor=white" alt="Version" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat" alt="License: MIT" /></a>
   <a href="https://github.com/giangsamne/zalo-personal-ai-agent/stargazers"><img src="https://img.shields.io/github/stars/giangsamne/zalo-personal-ai-agent?style=flat&color=gold" alt="GitHub Stars" /></a>
   <a href="https://github.com/giangsamne/zalo-personal-ai-agent/issues"><img src="https://img.shields.io/github/issues/giangsamne/zalo-personal-ai-agent?style=flat&color=red" alt="GitHub Issues" /></a>
@@ -152,7 +152,7 @@ Phản hồi mẫu:
     "masterConvId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "agentApi": "agentapi"
   },
-  "version": "1.0.0"
+  "version": "0.1.0"
 }
 ```
 

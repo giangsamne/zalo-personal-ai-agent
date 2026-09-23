@@ -42,7 +42,7 @@ function getEnvVar(keyName, defaultValue = "") {
 }
 
 // TÀI KHOẢN CHÍNH (MASTER)
-const APP_VERSION = "1.0.0";
+const APP_VERSION = "0.1.0";
 const MASTER_UID = getEnvVar("MASTER_UID", "");
 const MASTER_NAME = getEnvVar("MASTER_NAME", "Chủ nhân");
 const SESSION_DURATION_MS = 30 * 60 * 1000; // 30 phút

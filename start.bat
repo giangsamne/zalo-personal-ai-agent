@@ -3,7 +3,7 @@ chcp 65001 >nul
 cd /d "%~dp0"
 
 echo =================================================
-echo    🤖 Zalo Personal AI Agent v1.0.0             
+echo    🤖 Zalo Personal AI Agent v0.1.0 (Beta)             
 echo =================================================
 
 :: 1. Kiem tra Node.js

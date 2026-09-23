@@ -3,7 +3,7 @@ set -e
 cd "$(dirname "$0")"
 
 echo "================================================="
-echo "   🤖 Zalo Personal AI Agent v1.0.0             "
+echo "   🤖 Zalo Personal AI Agent v0.1.0 (Beta)             "
 echo "================================================="
 
 # 1. Kiểm tra môi trường Node.js

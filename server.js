@@ -11,7 +11,7 @@ function log(...args) {
 
 const server = new McpServer({
   name: "zalo-mcp",
-  version: "1.0.0",
+  version: "0.1.0",
 });
 
 async function callDaemon(endpoint, method = "GET", body = null) {

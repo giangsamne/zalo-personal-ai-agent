@@ -1,6 +1,6 @@
 {
   "name": "zalo-personal-ai-agent",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Cross-platform personal Zalo AI assistant with native Antigravity Project integration, guest token authorization, and 100% Agent conversation.",
   "main": "daemon.js",
   "type": "module",
