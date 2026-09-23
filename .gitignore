@@ -1,0 +1,18 @@
+# Secrets & Authentication
+session.json
+.env
+chat_sessions.json
+messages.json
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
