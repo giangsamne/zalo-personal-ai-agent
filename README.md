@@ -1,89 +1,140 @@
+<div align="center">
+
 # 🤖 Zalo Personal AI Agent
 
-> **Trợ lý AI cá nhân Zalo đa nền tảng (Linux, macOS, Windows) tích hợp trực tiếp Antigravity Project, cơ chế cấp quyền khách bằng mã Token bảo mật 30 phút và 100% đàm thoại với AI Agent.**
+**Trợ lý AI cá nhân Zalo đa nền tảng kết nối trực tiếp Google Antigravity & Gemini**  
+*Cơ chế phân quyền Master, bảo mật khách bằng mã Token 30 phút, 1-Click Startup và hoàn toàn không cần API key.*
 
-[![Node.js](https://img.shields.io/badge/Node.js-v20%2B-green.svg)](https://nodejs.org/)
-[![Version](https://img.shields.io/badge/Release-v1.0.0-blue.svg)](https://github.com/giangsamne/zalo-personal-ai-agent/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platforms](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue.svg)]()
+<p align="center">
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-v20%2B-339933.svg?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js" /></a>
+  <a href="https://github.com/giangsamne/zalo-personal-ai-agent/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-2563eb.svg?style=flat&logo=git&logoColor=white" alt="Version" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat" alt="License: MIT" /></a>
+  <a href="https://github.com/giangsamne/zalo-personal-ai-agent/stargazers"><img src="https://img.shields.io/github/stars/giangsamne/zalo-personal-ai-agent?style=flat&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/giangsamne/zalo-personal-ai-agent/issues"><img src="https://img.shields.io/github/issues/giangsamne/zalo-personal-ai-agent?style=flat&color=red" alt="GitHub Issues" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue.svg?style=flat" alt="Platforms" /></a>
+</p>
 
----
-
-## ✨ Điểm Nổi Bật (Features)
-
-1. **Tích hợp Native Antigravity Project (`Zalo AI Assistant`)**:
-   - Sử dụng trí tuệ nhân tạo của Antigravity đang chạy trên máy, **hoàn toàn không cần mua hay điền API key**.
-   - **Gom tất cả các phiên chat vào Project riêng `zalo-assistant`**: Quản lý gọn gàng trong Antigravity, **không làm ảnh hưởng hay xáo trộn** không gian làm việc code cá nhân của bạn.
-   - Master sở hữu một đoạn chat riêng biệt cao cấp (`Zalo: Master`, model `pro`).
-   - Mỗi khách khi kích hoạt Token thành công sẽ được tạo một đoạn chat riêng (`Zalo: <Tên khách> (<UID>)`, model `flash_lite` / `flash`).
-
-2. **100% Trò Chuyện Trực Tiếp Với AI Agent**:
-   - Không can thiệp bằng các lệnh gán sẵn cục bộ. Mọi tin nhắn đều được chuyển trực tiếp vào đoạn chat để AI Agent tự do suy nghĩ và phản hồi một cách thông minh, tự nhiên.
-
-3. **Cơ chế cấp quyền khách bằng Token 50 ký tự (Guest Token Authorization)**:
-   - Khi có người lạ nhắn tin lần đầu: Bot tự động trích xuất thông tin hồ sơ Zalo và tạo **mã Token 50 ký tự** gửi riêng cho Master duyệt.
-   - Khách chỉ trò chuyện được với Bot sau khi nhập đúng mã Token.
-   - Phiên kết nối duy trì trong **30 phút** hoặc kết thúc ngay khi khách gõ lệnh `/exit`.
-
-4. **Đa nền tảng 100% & Tự khởi động cùng hệ điều hành**:
-   - Chạy trên **Ubuntu/Debian Linux**, **macOS** và **Windows 10/11**.
-   - Hỗ trợ thiết lập tự chạy khi bật máy (`systemd` trên Linux, `LaunchAgent` trên macOS, `VBS Startup` trên Windows).
+</div>
 
 ---
 
-## 📁 Cấu Trúc Dự Án
+## 📖 Giới Thiệu (Overview)
+
+**Zalo Personal AI Agent** là giải pháp cầu nối thông minh biến tài khoản Zalo cá nhân của bạn thành một trợ lý AI thông minh, tự động trả lời tin nhắn thời gian thực dựa trên nền tảng **Google Antigravity Language Server** đang chạy trên máy tính.
+
+Dự án được thiết kế theo tiêu chí **Zero Configuration & 1-Click Startup**: bạn không cần phải đăng ký thẻ tín dụng hay mua Gemini API key riêng, mọi hội thoại đều được nhóm gọn gàng vào một Project riêng trên Antigravity mà không làm ảnh hưởng đến môi trường làm việc cá nhân của bạn.
+
+---
+
+## 🏗 Kiến Trúc Hệ Thống (Architecture)
 
 ```text
-zalo-personal-ai-agent/
-├── daemon.js              # Dịch vụ nền chính (Zalo client, AI Router, HTTP API)
-├── lib/
-│   └── antigravity.js     # Bridge kết nối Antigravity Language Server
-├── server.js              # MCP Server (Model Context Protocol)
-├── login.js               # Tiện ích đăng nhập quét mã QR Zalo
-├── package.json           # Khai báo cấu hình và scripts npm
-├── .env.example           # Mẫu biến môi trường (MASTER_UID)
-├── chat_sessions.json     # Quản lý phiên và ID chat của từng người
-└── scripts/
-    └── setup-autostart.js # Thiết lập tự động khởi động cùng hệ thống
+               ┌────────────────────────────────────────────────────────┐
+               │                     NGƯỜI DÙNG ZALO                    │
+               │   (Chủ nhân / Master)             (Khách nhắn tin)     │
+               └───────────┬────────────────────────────────┬───────────┘
+                           │                                │
+                           ▼                                ▼
+               ┌────────────────────────────────────────────────────────┐
+               │              Zalo Client (WebSocket / Listener)        │
+               └───────────────────────────┬────────────────────────────┘
+                                           │
+                                           ▼
+               ┌────────────────────────────────────────────────────────┐
+               │                Zalo AI Daemon (daemon.js)              │
+               │  - Phân luồng Master / Guest Token Authorization       │
+               │  - Tự động quản lý phiên trò chuyện (Sessions)         │
+               └───────────────────────────┬────────────────────────────┘
+                                           │ (agentapi CLI / gRPC)
+                                           ▼
+               ┌────────────────────────────────────────────────────────┐
+               │          Google Antigravity Language Server            │
+               │          Project: [Zalo AI Assistant]                  │
+               │                                                        │
+               │  ┌────────────────────────┐  ┌──────────────────────┐  │
+               │  │ Thread: Master Giang   │  │ Thread: Guest (<UID>)│  │
+               │  │ Model: Gemini Pro      │  │ Model: Flash / Lite  │  │
+               │  └────────────────────────┘  └──────────────────────┘  │
+               └────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Khởi Chạy
+## ✨ Tính Năng Nổi Bật (Key Features)
 
-### 1. Cài đặt các gói phụ thuộc
+- 🧠 **Tích hợp Native Antigravity Project (`Zalo AI Assistant`)**:
+  - Tận dụng sức mạnh suy luận từ session Antigravity đang chạy trên máy.
+  - **Không tốn chi phí API**: Không cần `GEMINI_API_KEY`.
+  - Gom toàn bộ chat vào Project riêng, không làm xáo trộn sidebar làm việc chính.
+- 💬 **100% Trò chuyện với AI Agent**:
+  - Không chặn bằng các lệnh cứng. Mọi tin nhắn đều được chuyển vào đoạn chat để AI Agent tự do suy nghĩ và phản hồi tự nhiên.
+  - Phân tầng mô hình thông minh: Master dùng mô hình cao cấp (`pro`), khách dùng mô hình tốc độ cao (`flash` / `flash_lite`).
+- 🔐 **Cơ chế cấp quyền khách bằng mã Token 50 ký tự**:
+  - Người lạ nhắn tin lần đầu sẽ nhận thông báo chờ duyệt.
+  - Bot gửi thông tin hồ sơ khách kèm **mã Token 50 ký tự** về Zalo của Master.
+  - Khách nhập đúng mã sẽ được kích hoạt phiên trò chuyện độc lập trong **30 phút**.
+  - Hỗ trợ lệnh `/exit` để khách chủ động kết thúc phiên sớm.
+- ⚡ **Khởi chạy siêu tốc (1-Click / 1 Lệnh)**:
+  - Windows: Nhấp đúp chuột file `start.bat`.
+  - Linux / macOS: Chạy script `./start.sh`.
+  - Tự động cài đặt thư viện và tự động in mã QR đăng nhập nếu chưa có session.
+- 🔄 **Tự động chạy ngầm cùng hệ điều hành**:
+  - Hỗ trợ `systemd` trên Linux, `LaunchAgent` trên macOS và `VBS Startup` ngầm trên Windows.
+
+---
+
+## 🚀 Khởi Chạy Nhanh (Quick Start)
+
+### 1. Tải về dự án
 ```bash
 git clone https://github.com/giangsamne/zalo-personal-ai-agent.git
 cd zalo-personal-ai-agent
-npm install
 ```
 
-### 2. Khởi chạy SIÊU ĐƠN GIẢN (1 Click / 1 Lệnh)
+### 2. Khởi chạy trong 1 thao tác
 
-- **Trên Windows**: Nhấp đúp chuột vào file **`start.bat`**.
-- **Trên Linux / macOS**: Chạy script:
+- **Trên Windows**: Nhấp đúp chuột vào file 👉 **`start.bat`**.
+- **Trên Linux / macOS**: Chạy lệnh:
   ```bash
   ./start.sh
   # hoặc: npm start
   ```
 
-> 💡 **Tự động 100%**: 
-> - Nếu lần đầu chạy, bot sẽ **tự động cài đặt thư viện** và **hiển thị mã QR** ngay trên màn hình.
-> - Bạn chỉ cần mở Zalo quét mã 1 lần duy nhất, bot sẽ tự lưu phiên và khởi động ngay lập tức!
-> - Từ lần sau, bot khởi động thẳng chỉ trong **1 giây**.
+> 💡 **Tự động 100%**:
+> - Nếu là lần đầu tiên chạy, bot sẽ **tự động cài đặt thư viện** (`npm install`).
+> - Nếu chưa có phiên đăng nhập, bot sẽ **in mã QR ngay trên màn hình terminal**. Bạn chỉ cần mở Zalo trên điện thoại quét 1 lần duy nhất!
+> - Từ lần thứ hai trở đi, bot khởi động thẳng trong vòng **1 giây**.
 
-### 3. Tự Động Khởi Động Khi Bật Máy Tính
-Chỉ cần chạy lệnh này một lần duy nhất:
+### 3. Cấu hình tự khởi động khi bật máy (Tùy chọn)
+Chạy lệnh sau đúng một lần duy nhất:
 ```bash
 npm run setup-autostart
 ```
-Bot sẽ tự động chạy ngầm mỗi khi bạn bật máy (hỗ trợ Linux systemd, Windows VBS Startup, macOS LaunchAgent).
+Từ nay về sau, mỗi khi bật máy tính lên, Bot sẽ tự động chạy ngầm và lắng nghe tin nhắn Zalo.
+
+---
+
+## ⚙️ Cấu Hình Nâng Cao (Configuration)
+
+Bạn có thể tạo file `.env` từ file mẫu `.env.example` để tùy chỉnh thông tin quản trị viên:
+
+```bash
+cp .env.example .env
+```
+
+| Biến Môi Trường | Mặc Định | Mô Tả |
+|:---|:---|:---|
+| `MASTER_UID` | `""` | ID tài khoản Zalo của Chủ nhân / Quản trị viên. |
+| `MASTER_NAME` | `"Chủ nhân"` | Tên hiển thị của Master trong các đoạn chat AI. |
+| `GEMINI_API_KEY` | `""` | *(Tùy chọn)* Dùng khi muốn chạy độc lập không qua Antigravity. |
+
+> 🔒 **Bảo mật**: File `.env` và `session.json` đã được `.gitignore` bảo vệ tuyệt đối, không bao giờ bị đẩy lên GitHub.
 
 ---
 
 ## 📡 API Trạng Thái Cục Bộ (Local Status API)
 
-Kiểm tra trạng thái daemon, tài khoản Zalo và phiên bản bot đang chạy:
+Kiểm tra trạng thái daemon và kết nối Zalo qua HTTP GET:
 ```bash
 curl http://127.0.0.1:39123/status
 ```
@@ -104,6 +155,12 @@ Phản hồi mẫu:
   "version": "1.0.0"
 }
 ```
+
+---
+
+## 🤝 Đóng Góp (Contributing)
+
+Mọi ý kiến đóng góp, báo lỗi hoặc yêu cầu tính năng mới đều được chào đón! Vui lòng đọc kỹ [CONTRIBUTING.md](CONTRIBUTING.md) trước khi tạo Pull Request.
 
 ---
 

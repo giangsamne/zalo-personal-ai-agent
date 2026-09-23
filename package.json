@@ -13,10 +13,15 @@
   },
   "keywords": [
     "zalo",
-    "ai",
+    "zalo-bot",
+    "zalo-ai",
+    "ai-agent",
+    "antigravity",
     "gemini",
-    "agent",
+    "chatbot",
+    "personal-assistant",
     "mcp",
+    "model-context-protocol",
     "cross-platform",
     "automation"
   ],
@@ -27,5 +32,13 @@
     "@modelcontextprotocol/sdk": "^1.30.0",
     "qrcode-terminal": "^0.12.0",
     "zca-js": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giangsamne/zalo-personal-ai-agent.git"
+  },
+  "homepage": "https://github.com/giangsamne/zalo-personal-ai-agent#readme",
+  "bugs": {
+    "url": "https://github.com/giangsamne/zalo-personal-ai-agent/issues"
   }
 }
