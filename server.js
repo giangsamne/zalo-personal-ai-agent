@@ -33,6 +33,12 @@ server.tool(
   "zalo_status",
   "Kiểm tra trạng thái kết nối tới tài khoản Zalo cá nhân",
   {},
+  {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false
+  },
   async () => {
     const data = await callDaemon("/status");
     return {
@@ -48,6 +54,12 @@ server.tool(
   {
     limit: z.number().optional().default(10).describe("Số lượng tin nhắn gần nhất cần lấy (mặc định 10)"),
     unread_only: z.boolean().optional().default(false).describe("Chỉ lấy tin nhắn chưa đọc")
+  },
+  {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false
   },
   async ({ limit, unread_only }) => {
     const data = await callDaemon(`/messages?limit=${limit}&unread_only=${unread_only}`);
@@ -66,6 +78,12 @@ server.tool(
     message: z.string().describe("Nội dung tin nhắn cần gửi"),
     is_group: z.boolean().optional().default(false).describe("True nếu gửi vào nhóm chat, False nếu gửi cho cá nhân")
   },
+  {
+    readOnlyHint: false,
+    destructiveHint: false,
+    idempotentHint: false,
+    openWorldHint: true
+  },
   async ({ thread_id, message, is_group }) => {
     const data = await callDaemon("/send", "POST", { threadId: thread_id, message, isGroup: is_group });
     return {
@@ -79,6 +97,12 @@ server.tool(
   "zalo_get_friends",
   "Lấy danh bạ bạn bè trên Zalo kèm ID và tên hiển thị",
   {},
+  {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false
+  },
   async () => {
     const data = await callDaemon("/friends");
     return {

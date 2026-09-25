@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-v20%2B-339933.svg?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js" /></a>
   <a href="https://github.com/giangsamne/zalo-personal-ai-agent/releases"><img src="https://img.shields.io/badge/Release-v0.1.0--beta-orange.svg?style=flat&logo=git&logoColor=white" alt="Version" /></a>
-  <a href="https://m8ven.ai/mcp/giangsamne-zalo-personal-ai-agent-tzngtd"><img src="https://m8ven.ai/badge/mcp/giangsamne/zalo-personal-ai-agent?variant=verified" alt="M8ven Verified" /></a>
+  <a href="https://m8ven.ai/mcp/giangsamne/zalo-personal-ai-agent"><img src="https://m8ven.ai/badge/mcp/giangsamne/zalo-personal-ai-agent?variant=verified" alt="M8ven Verified" /></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Policy-brightgreen.svg?style=flat&logo=shield" alt="Security Policy" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat" alt="License: MIT" /></a>
   <a href="https://github.com/giangsamne/zalo-personal-ai-agent/stargazers"><img src="https://img.shields.io/github/stars/giangsamne/zalo-personal-ai-agent?style=flat&color=gold" alt="GitHub Stars" /></a>
@@ -182,8 +182,8 @@ Phản hồi mẫu:
 Dự án tuân thủ nghiêm ngặt các nguyên tắc bảo vệ quyền riêng tư cá nhân:
 - 🏡 **100% Cục Bộ (Zero Cloud Relay)**: Toàn bộ phiên Zalo (`session.json`), khóa môi trường (`.env`) và lịch sử tin nhắn chỉ lưu trên máy bạn. Không có máy chủ trung gian nào thu thập dữ liệu hay nội dung trò chuyện.
 - ⏳ **Token Khách Tự Hủy 30 Phút**: Người lạ không thể kích hoạt AI nếu không có mã Token 50 ký tự do Chủ nhân cấp trực tiếp.
-- 🛡️ **Kiểm Định Độc Lập**: Đã được rà soát và đánh giá bảo mật trên [M8ven Trust Index](https://m8ven.ai/mcp/giangsamne-zalo-personal-ai-agent-tzngtd).
-- 📜 **Chính sách báo cáo lỗ hổng**: Xem chi tiết tại [SECURITY.md](SECURITY.md).
+- 🛡️ **Kiểm Định Độc Lập**: Đã được rà soát và đánh giá bảo mật trên [M8ven Trust Index](https://m8ven.ai/mcp/giangsamne/zalo-personal-ai-agent).
+- 📜 **Chính sách**: Xem chi tiết tại [SECURITY.md](SECURITY.md) và [PRIVACY.md](PRIVACY.md).
 
 ---
 
@@ -193,6 +193,7 @@ Mọi ý kiến đóng góp, báo lỗi hoặc yêu cầu tính năng mới đ�
 - 📘 Hướng dẫn đóng góp mã nguồn: [CONTRIBUTING.md](CONTRIBUTING.md)
 - 📜 Quy tắc ứng xử cộng đồng: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 - 🛡️ Chính sách bảo mật: [SECURITY.md](SECURITY.md)
+- 🔒 Chính sách quyền riêng tư: [PRIVACY.md](PRIVACY.md)
 
 ---
 

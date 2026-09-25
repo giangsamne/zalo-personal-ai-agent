@@ -9,6 +9,7 @@
     "daemon": "node daemon.js",
     "login": "node login.js",
     "mcp": "node server.js",
+    "test": "node --test test/*.test.js",
     "setup-autostart": "node scripts/setup-autostart.js"
   },
   "keywords": [
